@@ -15,6 +15,15 @@ run/main_scene="uid://bb5t4qs8c7hxh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[layer_names]
+
+2d_physics/layer_1="SOLID_WORLD"
+2d_physics/layer_2="SHORE_BLOCK"
+2d_physics/layer_3="NPC"
+2d_physics/layer_4="SHIP_OBSTACLES"
+2d_physics/layer_5="PLAYER"
+2d_physics/layer_6="SHIP"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
