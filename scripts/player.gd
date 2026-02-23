@@ -61,4 +61,10 @@ func _check_encounter_tile() -> void:
 	if randf() < encounter_chance:
 		_encounter_cooldown = encounter_cooldown_time
 		print("Encounter!")
+		_start_battle()
 		# Next step will be: call a function to start Battle scene
+		
+func _start_battle() -> void:
+	# store where we were so we can restore after battle
+	GameState.return_player_pos = global_position
+	get_tree().change_scene_to_file("res://scenes/battle/Battle.tscn")

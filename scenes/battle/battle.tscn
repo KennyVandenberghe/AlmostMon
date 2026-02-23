@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://1n8hbjxtxfpx"]
+
+[ext_resource type="Script" uid="uid://bc3olty8uyt7l" path="res://scenes/battle/battle.gd" id="1_7gynk"]
+
+[node name="Battle" type="Control" unique_id=462061923]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7gynk")
+
+[node name="Panel" type="Panel" parent="." unique_id=1987752700]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=418236559]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnemyLabel" type="Label" parent="Panel/VBoxContainer" unique_id=841245814]
+layout_mode = 2
+text = "A wild ??? appeared!"
+
+[node name="InfoLabel" type="Label" parent="Panel/VBoxContainer" unique_id=515754001]
+layout_mode = 2
+text = "Battle Info"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=565135829]
+layout_mode = 2
+
+[node name="AttackBtn" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=264176791]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Attack"
+
+[node name="RunBtn" type="Button" parent="Panel/VBoxContainer/HBoxContainer" unique_id=228011112]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Run"
+
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/AttackBtn" to="." method="_on_attack_btn_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/RunBtn" to="." method="_on_run_btn_pressed"]

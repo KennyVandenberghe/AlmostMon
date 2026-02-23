@@ -15,6 +15,10 @@ run/main_scene="uid://bb5t4qs8c7hxh"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*uid://c3qctqhuea5di"
+
 [layer_names]
 
 2d_physics/layer_1="SOLID_WORLD"
